@@ -74,6 +74,9 @@ verb_phrase(vp(V, PP)) -->
 preposition_phrase(pp(Pre, NP)) -->
     preposition(Pre),
     noun_phrase(NP). 
-preposition_phrase(pp(Pre, S)) -->
+
+preposition_phrase(pp(Pre, ADV, NP, VP)) -->
     preposition(Pre),
-    sentence(S).
+    noun_phrase(NP),
+    abverb(ADV),
+    verb_phrase(VP).

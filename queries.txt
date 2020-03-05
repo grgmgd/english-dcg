@@ -1,6 +1,6 @@
 accept:sentence(PT, [the,young,boy,who,worked,for,the,old,man,pushed,and,stored,a,big,box,in,the,large,empty,room,after,school], []).
 accept:sentence(PT, [the,old,woman,and,the,old,man,gave,the,poor,young,man,whom,they,liked,a,white,envelope,in,the,shed,behind,the,building], []).
-accept:sentence(PT, [every,boy,quickly,climbed,some,big,tree,while,every,girl,secretly,watched], []).
+accept:sentence(PT, [every,boy,quickly,climbed,some,big,tree,while,every,girl,secretly,watched,some,boy], []).
 accept:sentence(PT, [some,brilliant,students,and,many,professors,watched,and,admired,talented,lecturers,and,appreciated,bright,scientists,and,researchers], []).
 reject:sentence(PT ,[the,boy,while,the,girl,pushed,a,box], []).
 reject:sentence(PT ,[the,boy,pushed,while,stored,a,box], []).

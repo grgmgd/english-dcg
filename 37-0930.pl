@@ -10,6 +10,21 @@ pronoun_phrase(s(P, NP)) -->
     pronoun(P),
     noun_phrase(NP).
 
+determinant_phrase(np(Det, ADJ, NP)) -->
+    det(Det),
+    adj(ADJ),
+    noun_phrase(NP).
+determinant_phrase(np(Det, ADJ, NP)) -->
+    det(Det),
+    adj(ADJ),
+    noun(ADJ),
+    noun_phrase(NP).
+determinant_phrase(np(Det, N)) -->
+    det(Det),
+    noun(N).
+
+noun_phrase(NP) -->
+    determinant_phrase(NP).
 noun_phrase(np(N)) -->
     noun(N).
 noun_phrase(np(P)) -->
@@ -25,9 +40,6 @@ noun_phrase(npcj(N, C, VP)) -->
     noun(N),
     conjunction(C),
     verb_phrase(VP).
-noun_phrase(np(D, NP)) -->
-    det(D),
-    noun_phrase(NP).
 noun_phrase(np(ADJ, NP)) -->
     adj(ADJ),
     noun_phrase(NP).
@@ -38,7 +50,6 @@ noun_phrase(np(N, P, VP)) -->
 noun_phrase(np(N, PP)) -->
     noun(N),
     preposition_phrase(PP).
-
 
 verb_phrase(vp(V)) -->
     verb(V).
@@ -59,7 +70,6 @@ verb_phrase(vpcj(V, C, VP)) -->
 verb_phrase(vp(V, PP)) -->
     verb(V),
     preposition_phrase(PP).
-
 
 preposition_phrase(pp(Pre, NP)) -->
     preposition(Pre),
